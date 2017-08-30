@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../Core/etc/config.xsd">
+    <default>
+        <imaginationmedia_alexa>
+            <connect>
+                <debugmode>1</debugmode>
+            </connect>
+        </imaginationmedia_alexa>
+    </default>
+</config>

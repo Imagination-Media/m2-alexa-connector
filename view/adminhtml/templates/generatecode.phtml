@@ -1,0 +1,35 @@
+<style>
+    #row_imaginationmedia_alexa_connect_generate_key > .label {
+        display: none;
+    }
+</style>
+
+<table>
+    <tr>
+        <td>
+            <button style="" onclick="generateApiKey('<?php echo $this->getButtonUrl() ?>')" class="scalable" type="button" id="<?php echo $this->getHtmlId() ?>">
+                <span><?php echo $this->escapeHtml($this->getButtonLabel()); ?></span>
+            </button>
+        </td>
+    </tr>
+</table>
+
+<script>
+    require([
+        "jquery",
+        "jquery/ui"
+    ], function(jQuery){
+        generateApiKey = function($url) {
+            jQuery.ajax({
+                    type: "POST",
+                    url: $url,
+                    data: { send: 1 },
+                    showLoader: true,
+                    success: function (data) {
+                        jQuery("#imaginationmedia_alexa_connect_api_key").val(data.token);
+                    }
+                }
+            );
+        };
+    });
+</script>

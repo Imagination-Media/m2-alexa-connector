@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <tab id="imaginationmedia" translate="label" sortOrder="100">
+            <label>Imagination Media</label>
+        </tab>
+        <section id="imaginationmedia_alexa" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+            <class>separator-top</class>
+            <label>Alexa</label>
+            <tab>imaginationmedia</tab>
+            <resource>ImaginationMedia_Alexa::alexa</resource>
+            <group id="connect" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Connect</label>
+                <field id="debugmode" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Debug mode</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="api_key" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>API Key</label>
+                </field>
+                <field id="generate_key" type="button" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Generate API Key</label>
+                    <button_label>Generate API Key</button_label>
+                    <frontend_model>ImaginationMedia\Alexa\Block\Adminhtml\Generate</frontend_model>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>
