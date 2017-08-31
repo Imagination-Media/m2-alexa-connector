@@ -1,4 +1,10 @@
 <?php
+/**
+ * Alexa API connector
+ *
+ * @author Fred Orosko Dias <fred@imaginemage.com>
+ * @link https://imaginemaage.com/
+ */
 
 namespace ImaginationMedia\Alexa\Controller\Adminhtml\Index;
 
